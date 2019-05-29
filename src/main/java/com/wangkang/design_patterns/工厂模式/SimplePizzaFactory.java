@@ -1,7 +1,7 @@
 package com.wangkang.design_patterns.工厂模式;
 
 /**
- * @Description: pizza 的简单工厂
+ * @Description: pizza 的简单工厂：客户端程序直接调用这个工厂的静态方法
  * @Author: wangkang
  * @Date: Created in 22:52 2019/5/24
  * @Modified By:

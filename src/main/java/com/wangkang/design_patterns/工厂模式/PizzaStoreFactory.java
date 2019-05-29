@@ -22,6 +22,6 @@ public abstract class PizzaStoreFactory {
 
         return pizza;
     }
-    //让子类决定如何制造披萨
+    //让子类决定如何制造披萨，这才是工厂模式的核心
     abstract Pizza createPizza(String type);
 }
