@@ -13,7 +13,8 @@ public class PersonBuilder0Test {
 
     @Test
     public void test() {
-        System.out.println(new PersonBuilder0().buildArmLeft("大左胳膊").buildArmLeft("小右胳膊").build());//没有手和头
+        Person p = new PersonBuilder0().buildArmLeft("大左胳膊").buildArmLeft("小右胳膊").build();
+        System.out.println(p);//没有手和头
     }
 
 }
