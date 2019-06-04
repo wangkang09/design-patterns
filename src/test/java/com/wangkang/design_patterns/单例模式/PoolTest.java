@@ -24,9 +24,21 @@ public class PoolTest {
         Teacher t0 = null;
         for (int i = 0; i < 10000; i++) {
             Future f1 =executor.submit(()->{
+                System.out.println("------------------------");
+                try {
+                    Thread.sleep(10010);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 Pool.ORACLE_POOL.getDataSource();
             });
             Future f2 =executor.submit(()->{
+                System.out.println("------------------------");
+                try {
+                    Thread.sleep(10000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 Pool.ORACLE_POOL.getDataSource();
             });
 

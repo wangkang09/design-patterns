@@ -4,7 +4,6 @@ import com.alibaba.druid.pool.DruidDataSource;
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.boot.jdbc.DataSourceBuilder;
-import org.springframework.boot.jdbc.metadata.HikariDataSourcePoolMetadata;
 
 import javax.sql.DataSource;
 
@@ -15,12 +14,13 @@ import javax.sql.DataSource;
  * @Modified By:
  */
 public enum Pool {
-    ORACLE_POOL("oracle",DataSourceBuilder.create().type(HikariDataSource.class).build()),
     JVM_POOL("jvm",DataSourceBuilder.create().type(ComboPooledDataSource.class).build()),
+    ORACLE_POOL("oracle",DataSourceBuilder.create().type(HikariDataSource.class).build()),
     MYSQL_POOL("mysql",DataSourceBuilder.create().type(DruidDataSource.class).build());
     private String name;
     private DataSource dataSource;
     Pool (String name,DataSource dataSource) {
+        System.out.println(name + " " + dataSource.toString());
         this.name = name;
         this.dataSource = dataSource;
     }
