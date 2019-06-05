@@ -6,20 +6,20 @@ package com.wangkang.design_patterns.Adapter模式.类_对象模式;
  * @Date: Created in 11:01 2019/6/4
  * @Modified By:
  */
-public class ForeignCenterAdapter extends Player {
-    private ForeignPlayer foreignPlayer;
-    public ForeignCenterAdapter(ForeignPlayer foreignPlayer) {
-        super(foreignPlayer.get名字());
-        this.foreignPlayer = foreignPlayer;
+public class ForeignCenterAdapter extends ForeignPlayer {
+    private Player player;
+    public ForeignCenterAdapter(Player player) {
+        super(player.get名字());
+        this.player = player;
     }
 
     @Override
     public void attack() {
-        foreignPlayer.进攻();
+        player.进攻();
     }
 
     @Override
     public void defense() {
-        foreignPlayer.防守();
+        player.防守();
     }
 }
