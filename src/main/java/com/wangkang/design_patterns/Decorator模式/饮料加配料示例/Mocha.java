@@ -8,18 +8,19 @@ package com.wangkang.design_patterns.Decorator模式.饮料加配料示例;
  */
 public class Mocha extends CondimentDecorator {
     public Mocha(Beverage beverage, Size size) {
-        super(beverage, size);
-    }
+        this.beverage = beverage;
+        this.size = size;    }
     public Mocha(Beverage beverage) {
-        super(beverage, Size.GRADNDE);
+        this.beverage = beverage;
+        this.size = Size.GRADNDE;
     }
     @Override
     public String getDescription() {
-        return super.getBeverage().getDescription() + ", Mocha";
+        return beverage.getDescription() + ", Mocha";
     }
 
     @Override
     public double cost() {
-        return super.getBeverage().cost() + 0.33;
+        return beverage.cost() + 0.33;
     }
 }

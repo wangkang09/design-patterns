@@ -7,7 +7,7 @@ package com.wangkang.design_patterns.Decorator模式.饮料加配料示例;
  * @Modified By:
  */
 public abstract class Beverage {
-    String description = "Unknown Beverage";//需要被子类继承，所有不能定义为私有
+    protected String description = "Unknown Beverage";//需要被子类继承，所有不能定义为私有
 
     public String getDescription() {
         return description;
