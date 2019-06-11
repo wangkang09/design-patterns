@@ -11,7 +11,7 @@ import org.junit.Test;
 public class MilkTest {
     @Test
     public void test() {
-        Beverage beverage = new Coffee();
+        Beverage beverage = new Coffee(Size.TALL);
         beverage = new Milk(beverage);
         beverage = new Mocha(beverage);
         System.out.println(beverage.getDescription());

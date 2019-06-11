@@ -9,13 +9,8 @@ package com.wangkang.design_patterns.Decorator模式.饮料加配料示例;
 public class Milk extends CondimentDecorator {
     public Milk(Beverage beverage) {
         this.beverage = beverage;
-        this.size = Size.GRADNDE;
     }
 
-    public Milk(Beverage beverage,Size size) {
-        this.beverage =  beverage;
-        this.size = size;
-    }
     @Override
     public String getDescription() {
         return beverage.getDescription() + ", milk";
