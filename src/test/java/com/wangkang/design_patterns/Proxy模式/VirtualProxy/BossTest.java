@@ -31,4 +31,15 @@ public class BossTest {
         assistant.approve();
     }
 
+    public String dd() {
+        String step1 = "1. 大学光电信息工程，简单学了点 c、c++，然后就浑浑噩噩考研了\n";
+        String step2 = "2. 研究生看了2个星期的 Java 视频，某天导师突然问我最近在干什么，说学 Java 就被分配到导师私人公司，开始了我的码农之旅";
+        return step1 + step2;
+    }
+
+    @Test
+    public void test1(){
+        System.out.println(dd());
+    }
+
 }

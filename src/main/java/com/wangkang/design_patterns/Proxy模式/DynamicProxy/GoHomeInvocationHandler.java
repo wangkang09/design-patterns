@@ -17,6 +17,7 @@ public class GoHomeInvocationHandler implements InvocationHandler {
         // 这里可以做增强
         System.out.println("先打电话回家~");
         Object result = method.invoke(obj, args);
+        System.out.println();
         return result;
     }
 
